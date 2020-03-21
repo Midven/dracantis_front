@@ -28,95 +28,164 @@ import { HistoriquepseudoComponent } from './historiquepseudo/historiquepseudo.c
 const routes: Routes = [
   {
     path: "",
-    component: HomeComponent
+    component: HomeComponent,
+    data : {
+      title: "Accueil"
+    }
   },
   {
     path: "aide",
-    component: AideComponent
+    component: AideComponent,
+    data : {
+      title: "Aide"
+    }
   },
   {
     path: "classements",
-    component: ClassementsComponent
+    component: ClassementsComponent,
+    data : {
+      title: "Classements"
+    }
   },
   {
     path: "competitions",
-    component: CompetitionsComponent
+    component: CompetitionsComponent,
+    data : {
+      title: "Compétitions"
+    }
   },
   {
     path: "elevage",
-    component: ElevageComponent
+    component: ElevageComponent,
+    data : {
+      title: "Elevage"
+    }
   },
   {
     path: "entrainements",
-    component: EntrainementsComponent
+    component: EntrainementsComponent,
+    data : {
+      title: "Entrainements"
+    }
   },
   {
     path: "forum",
-    component: ForumComponent
+    component: ForumComponent,
+    data : {
+      title: "Forum"
+    }
   },
   {
     path: "inscription",
-    component: InscriptionComponent
+    component: InscriptionComponent,
+    data : {
+      title: "Inscription"
+    }
   },
   {
     path: "livredor",
-    component: LivredorComponent
+    component: LivredorComponent,
+    data : {
+      title: "Livre d'or"
+    }
   },
   {
     path: "marche",
-    component: MarcheComponent
+    component: MarcheComponent,
+    data : {
+      title: "Marché"
+    }
   },
   {
     path: "messagerie",
-    component: MessagerieComponent
+    component: MessagerieComponent,
+    data : {
+      title: "Messagerie"
+    }
   },
   {
     path: "moncompte",
-    component: MoncompteComponent
+    component: MoncompteComponent,
+    data : {
+      title: "Mon compte"
+    }
   },
   {
     path: "nouveautes",
-    component: NouveautesComponent
+    component: NouveautesComponent,
+    data : {
+      title: "Nouveautés"
+    }
   },
   {
     path: "rechercher",
-    component: RechercherComponent
+    component: RechercherComponent,
+    data : {
+      title: "Rechercher"
+    }
   },
   {
     path: "soigneur",
-    component: SoigneurComponent
+    component: SoigneurComponent,
+    data : {
+      title: "Soigneur"
+    }
   },
   {
     path: "sorcier",
-    component: SorcierComponent
+    component: SorcierComponent,
+    data : {
+      title: "Sorcier"
+    }
   },  
   {
     path: "dragon",
-    component: DragonComponent
+    component: DragonComponent,
+    data : {
+      title: "Dragons"
+    }
   },
   {
     path: "achat_dragonnet",
-    component: AchatdragonnetComponent
+    component: AchatdragonnetComponent,
+    data : {
+      title: "Achat dragonnet"
+    }
   },
   {
     path: "historique_dracor",
-    component: HistoriquedracorComponent
+    component: HistoriquedracorComponent,
+    data : {
+      title: "Historique DracOr"
+    }
   },
   {
     path: "historique_ea",
-    component: HistoriqueeaComponent
+    component: HistoriqueeaComponent,
+    data : {
+      title: "Historique Eclat D'Âme"
+    }
   },
   {
     path: "historique_ec",
-    component: HistoriqueecComponent
+    component: HistoriqueecComponent,
+    data : {
+      title: "Historique Eclat de Coeur"
+    }
   },
   {
     path: "historique_pouvoirs",
-    component: HistoriquepouvoirsComponent
+    component: HistoriquepouvoirsComponent,
+    data : {
+      title: "Historique des pouvoirs"
+    }
   },
   {
     path: "historique_pseudo",
-    component: HistoriquepseudoComponent
+    component: HistoriquepseudoComponent,
+    data : {
+      title: "Historique des pseudos"
+    }
   },
 ];
 
