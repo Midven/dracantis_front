@@ -1,0 +1,46 @@
+@mixin bouton($bgc:lighten($couleurPrincipaleSite, 30%), $color:$couleurPrincipaleSite){
+    
+    display: inline-block;
+    background-color: $bgc;
+    border:2px solid transparent;
+    border-radius: $borderRadius;
+    padding:0.8rem;
+    margin: 10px 0 10px 0;
+    color: $color;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    &:hover{
+        
+        background-color: lighten($bgc, 10%);
+    }
+}
+
+@mixin submit($bgc:lighten($couleurPrincipaleSite, 30%), $color:$couleurPrincipaleSite, $bgcHover:$couleurSecondaireSite, $colorHover:$couleurTexteBouton){
+    
+    display:inline-block;
+    background-color: $bgc;
+    border:2px solid transparent;
+    border-radius: $borderRadius;
+    padding:0.8rem;
+    margin: 10px 0 10px 0;
+    color: $color;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-align: center;
+    cursor:pointer;
+    &:hover{
+        background-color: $bgcHover;
+        color: $colorHover;
+    }
+}
+
+@mixin bloc(){
+    background-color: lighten($couleurPrincipaleSite, 10%);
+    border-radius: $borderRadius;
+    padding:10px;
+    margin: 10px 0;
+}

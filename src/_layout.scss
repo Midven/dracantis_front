@@ -1,0 +1,746 @@
+html{
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+body, header, footer, section, article, div{
+    margin:0;
+    padding:0;
+}
+
+.contenuSite{
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    background-color: $couleurPrincipaleSite;
+}
+
+
+.container{
+    width:1000px;
+    margin:auto;
+}
+
+header{
+    width:100%;
+    background-color: $couleurSecondaireSite;
+    .menuJeu{
+        width: 100%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.connexion{
+    background-color: lighten($couleurPrincipaleSite, 10%);
+    padding: 1.5rem 0 1.5rem 0;
+    .container{
+        display:flex;
+        justify-content: flex-end;
+
+        label{
+            font-weight: 700;
+        }
+    }
+}
+
+.sectionJeu{
+    // permet d'afficher le reste du site en collant le footer et le header aux limites de la fenêtre
+    flex-grow: 1;
+    // background-color:lighten($couleurPrincipaleSite, 10%);
+    .bulleAccueilNonConnecte{
+        margin:4rem auto;
+        position:relative;
+        background-color:lighten($couleurPrincipaleSite, 10%);
+        width: 500px;
+        padding: 2rem;
+        text-align: justify;
+        border-radius: $borderRadius;
+        // &:before{
+        //     content:"";
+        //     position: absolute;
+        //     width: 50px;
+        //     height: 50px;
+        //     background-color:lighten($couleurPrincipaleSite, 10%);
+        //     bottom:-50px;
+        //     left:340px;
+        // }
+        // &:after{
+        //     content:"";
+        //     position: absolute;
+        //     width:70px;
+        //     height: 40px;
+        //     background-color: $couleurPrincipaleSite;
+        //     bottom:-59px;
+        //     left:316px;
+        //     transform: rotate(45deg);
+        // }
+
+        .imageMascotte{
+            transform: scaleX(-1);
+            position:relative;
+            top:250px;
+            left: 250px;
+        }
+
+        p{
+            line-height: 1.4rem;
+        }
+        
+        span{
+            font-weight: 700;
+            
+            p::first-letter{
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .inscriptionFormulaire{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin:auto;
+        padding:30px;
+        background-color: lighten($couleurPrincipaleSite, 10%);
+        width:560px;
+        .inscriptionInfoCompte, .inscriptionInfoPerso{
+            width:250px;
+            margin-bottom: 20px;
+        }
+    }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 MON COMPTE                                 */
+/* -------------------------------------------------------------------------- */
+
+    .infoCompte{
+        display:flex;
+        justify-content: space-around;
+    }
+
+    .infoPersoEtHistorique{
+        .container{
+            display:flex;
+            
+            justify-content: space-between;
+            .infoPerso{
+                width: 49%;
+            }
+            .historiques{
+                width:49%;
+            }
+        }
+    }
+
+    .etatCompte{
+        .container{
+            fieldset{
+                display:flex;
+                justify-content: space-between;
+                .reinitialiserCompte{
+                    width:48%;
+                }
+                .supprimerCompte{
+                    width:48%;
+                }
+            }
+        }
+    }
+
+    .historiqueEa{
+        table{
+            margin-top: 10px;
+            width:100%;
+        }
+    }
+
+    .historiqueEc{
+        table{
+            margin-top: 10px;
+            width:100%;
+        }
+    }
+
+    .historiquePseudo{
+        table{
+            margin-top: 10px;
+            width:100%;
+        }
+    }
+    
+    .historiquePouvoirs{
+        table{
+            margin-top: 10px;
+            width:100%;
+        }
+    }
+
+    .historiqueDracOr{
+        table{
+            margin-top: 10px;
+            width:100%;
+        }
+    }
+
+
+/* -------------------------------------------------------------------------- */
+/*                            ELEVAGE FICHE DRAGON                            */
+/* -------------------------------------------------------------------------- */
+
+    .ficheDragon{
+        .container{
+            display:flex;
+            justify-content: center;
+
+
+
+            a{
+                color:$couleurTextePrincipale;
+                font-weight: 700;
+            }
+
+            .soins, .reproduction, .origines, .palmares, .nomDragon, .imageDragon, .infoGenerale, .aptitudes, .sante, .dressage, .bonus, .inventaire{
+                background-color: lighten($couleurPrincipaleSite, 10%);
+                border-radius: $borderRadius;
+                padding:15px;
+                margin:10px;
+            }
+
+            .colGauche{
+                width:25%;
+            }
+
+            .colDroite{
+                width:25%;
+            }
+
+            .colCentrale{
+                width:50%;
+                .infoGenerale{
+                    display: flex;
+                    div{
+                        width: 50%;
+                    }
+                }
+                .imageDragon{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                table{
+                    width:100%;
+                    td{
+                        &:nth-child(1){
+                            width:25%;
+                        }
+                        &:nth-child(2){
+                            width:60%;
+                        }
+                        &:nth-child(3){
+                            width:15%;
+                        }
+
+                    }
+                }
+                
+            }
+        }
+
+    }
+
+    .listeDragons{
+        .resumeDragon{
+            display:flex;
+            background-color: lighten($couleurPrincipaleSite, 10%);
+            margin: 10px;
+            padding: 10px;
+            width: 50%;
+            border-radius: $borderRadius;
+            .imgDragonMiniature{
+                text-align: center;
+                width: 150px;
+                height: 150px;
+                img{
+                    width:100%;
+                }
+            }
+            .nomDragon{
+                font-size: 1.5rem;
+                font-weight: 700;
+                a{
+                    color:$couleurTextePrincipale;
+                }
+            }
+        }
+    }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 CLASSEMENTS                                */
+/* -------------------------------------------------------------------------- */
+
+    .classements{
+        width: 100%;
+        display:flex;
+        flex-wrap: wrap;
+        .classement{
+            width: 47%;
+            padding: 10px;
+            margin: 10px;
+            background-color: lighten($couleurPrincipaleSite, 10%);
+            border-radius: $borderRadius;
+            h3{
+                text-align: center;
+            }
+            
+            // tableaux classements
+            tr > td:nth-child(odd) {
+                font-weight: 700;
+                text-align: center;
+            }
+            
+            tr > td:nth-child(even){
+                width:400px;
+                text-indent: 2rem;
+            }
+        }
+
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                    FORUM                                   */
+/* -------------------------------------------------------------------------- */
+
+    .forum{
+        margin: 1rem 0 1rem 0;
+        .container{
+            .globalForum{
+                background-color: lighten($couleurPrincipaleSite, 10%);
+                border-radius: $borderRadius;
+                &>:first-child{
+                    border-radius: $borderRadius $borderRadius 0 0;
+                }   
+                &>:last-child{
+                    border-radius: 0 0 $borderRadius $borderRadius;
+                }
+
+                .categorieForum{
+                    width: 100%;
+                    background-color: $couleurSecondaireSite;
+                    color: white;
+                    padding: 10px;
+                }
+                .sectionForum:nth-child(odd){
+                    background-color: lighten($couleurPrincipaleSite, 15%);
+                    &:hover{
+                        background-color: lighten($couleurPrincipaleSite, 4%);
+                    }
+                }
+                .sectionForum{
+                    padding: 5px;
+                    margin:0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    &:hover{
+                        background-color: lighten($couleurPrincipaleSite, 4%);
+                    }
+                    a{
+                        font-weight: 700;
+                    }
+                    .nouveauMessageForum{
+                        width: 80px;
+                        height: 80px;
+                        display:flex;
+                        justify-content: center;
+                        align-items: center;
+                        .icone{
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: darken($couleurPrincipaleSite, 10%);
+                        }
+                    }
+
+                    .descriptionSectionForum{
+                        width: 50%;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                    }
+
+                    .nombreDeMessages{
+                        width:20%;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                    }
+
+                    .dernierPosteur{
+                        width: 20%;
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        text-indent: -15px;
+                        a{
+                            display:inline-block;
+                        }
+                    }
+                    
+                }
+            }
+
+            .membresConnectes{
+                width: 100%;
+                background: lighten($couleurPrincipaleSite, 10%);
+                margin: 1rem 0;
+                padding:10px;
+                border-radius: $borderRadius;
+            }
+        }
+    }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 RECHERCHER                                 */
+/* -------------------------------------------------------------------------- */
+
+    .rechercher{
+        .container{
+            display:flex;
+            flex-direction: column;
+            .infoRecherche{
+                margin: 10px 0 auto;
+                padding:10px;
+                width: 100%;
+                background-color: lighten($couleurPrincipaleSite, 10%);
+                border-radius: $borderRadius;
+                text-align: center;
+            }
+            .recherches{
+                width:100%;
+                margin:auto;
+                display:flex;
+                justify-content: space-between;
+                >div{
+                    margin: 10px 0;
+                    padding: 10px;
+                    border-radius: $borderRadius;
+                    background-color: lighten($couleurPrincipaleSite, 10%);
+                    width: 320px;
+                }
+            }    
+        }    
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                   MARCHE                                   */
+/* -------------------------------------------------------------------------- */
+
+    .marche{
+        .container{
+            display:flex;
+            flex-direction: column;
+
+            > div{
+                @include bloc();
+            }
+            .ventes{
+                display:flex;
+                justify-content: space-around;
+            }
+
+            table{
+                width:80%;
+                td{
+                    text-align: center;
+                    &:nth-child(1){
+                        width:45%;
+                    }
+                    &:nth-child(2){
+                        width:10%;
+                    }
+                    &:nth-child(3){
+                        width:45%;
+                    }
+                }
+                
+            }
+
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                 LIVRE D'OR                                 */
+/* -------------------------------------------------------------------------- */
+
+    .livreDor{
+        .container{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            article:nth-child(odd){
+                background-color: lighten($couleurPrincipaleSite, 15%);
+            }
+            article{
+                @include bloc();
+                display: flex;
+                width:100%;
+                
+                .infosMembre{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 20%;
+                }
+                .messageDate{
+                    display:flex;
+                    flex-direction: column;
+                    width:80%;
+                    .date{
+                        text-align: right;
+                        font-size: 0.8rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+       
+/* -------------------------------------------------------------------------- */
+/*                                ENTRAINEMENT                                */
+/* -------------------------------------------------------------------------- */
+
+    .entrainement{
+        .container{
+            display: flex;
+            >section{
+                @include bloc();
+            }
+            .imgDragEntrainement{
+                width: 40%;
+                display:flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+            .competences{
+                width: 58%;
+                margin-left: 10px;
+            }
+            table{
+                width:100%;
+                td{
+                    &:nth-child(1){
+                        width: 25%;
+                    }
+                    &:nth-child(2){
+                        width: 55%;
+                    }
+                    &:nth-child(3){
+                        width: 10%;
+                        text-align: center;
+                    }
+                    &:nth-child(4){
+                        width: 10%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                COMPETITIONS                                */
+/* -------------------------------------------------------------------------- */
+
+    .competitions{
+        .container{
+            article{
+                @include bloc
+            }
+            select{
+                width:150px;
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                   SORCIER                                  */
+/* -------------------------------------------------------------------------- */
+
+    .sorcier{
+        .container{
+            display: flex;
+            justify-content: space-between;
+            .pouvoirs{
+                width: 70%;
+                .pouvoir{
+                    @include bloc();
+                    width: 100%;
+                    > div{
+                        display:flex;
+                        align-items: center;
+                    }
+                    .nomCout{
+                        justify-content: space-between;
+                    }
+                    .description{
+                        justify-content: space-between;
+                        .texte{
+                            width: 80%;
+                        }
+                    }
+                    .utiliser{
+                        justify-content: right;
+                    }
+                }
+            }
+                
+            .illusorcier{
+                width: 20%;
+            }
+
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                                  SOIGNEUR                                  */
+/* -------------------------------------------------------------------------- */
+
+    .soigneur{
+        .container{
+            display: flex;
+                .illustrationsoigneur{
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    img{
+                        height: 500px;
+                    }
+                }
+                .listeDragons
+                {
+                    width: 50%;
+                    article{
+                        @include bloc();
+                        display:flex;
+                        align-items: center;
+                        .illustrationDragon{
+                            width:100%;
+                            img{
+                                width:100%;
+                            }
+                        }
+                        .descriptionDragon{
+                            width:100%;
+                        }
+                        .illustration{
+                            width:50%;
+                        }
+                    }
+                }
+        }
+        
+    }
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 NOUVEAUTES                                 */
+/* -------------------------------------------------------------------------- */
+
+    .nouveautes{
+        .container{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            article:nth-child(odd){
+                background-color: lighten($couleurPrincipaleSite, 15%);
+            }
+            article{
+                @include bloc();
+                display: flex;
+                width:100%;
+
+                    
+                .infosMembre{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 20%;
+                }
+                .messageDate{
+                    display:flex;
+                    flex-direction: column;
+                    width:80%;
+                    .titreDate{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        text-align: right;
+                        font-size: 0.8rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+/* -------------------------------------------------------------------------- */
+/*                               ACHAT DRAGONNET                              */
+/* -------------------------------------------------------------------------- */
+
+    .achatDragonnet{
+        .container{
+            .formulaire{
+                @include bloc();
+                text-align: center;
+            }
+            .illustrationDragon{
+                @include bloc();
+                text-align: center;
+                h2{
+                    text-transform: uppercase;
+                }
+                img{
+                    width : 40%;
+                    &[data-sexe='dragonnet']{
+                        width : 20%;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+footer{
+    background-color: $couleurSecondaireSite;
+    color: $couleurTexteHeaderFooter;
+    padding: 1rem 0 1rem 0;
+    margin-top: 50px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+}

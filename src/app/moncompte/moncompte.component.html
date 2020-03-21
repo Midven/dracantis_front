@@ -1,0 +1,133 @@
+<section class="container">
+        <fieldset>
+            <legend>Informations du compte</legend>
+            <section class="infoCompte">
+                <div>
+                    <label for="changepseudo">Changer de pseudo</label>
+                    <br />
+                    <input type="text" class="inputText" id="changepseudo">
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+                    <label for="changenomelevage">Changer de nom d'élevage</label>
+                    <br />
+                    <input type="text" class="inputText" id="changenomelevage">
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+                    <a href="" class="submitImportant">Modifier mon blog</a>
+                    <br />
+                    <a href="" class="submitImportant">Modifier ma signature</a>
+                </div>
+                <div>
+                    <label for="changemdp">Changer mot de passe</label>
+                    <br />
+                    <input type="password" class="inputText" id="changemdp">
+                    <br />
+                    <label for="changemdpconfirm">Confirmer changement mot de passe</label>
+                    <br />
+                    <input type="password" class="inputText" id="changemdpconfirm">
+                    <br />
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+
+                    <label for="changemail">Changer email</label>
+                    <br />
+                    <input type="email" class="inputText" id="changemail">
+                    <br />
+                    <label for="changemailconfirm">Confirmer changement email</label>
+                    <br />
+                    <input type="email" class="inputText" id="changemailconfirm">
+                    <br />
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+                </div>
+            </section>
+        </fieldset>
+
+    <section class="infoPersoEtHistorique">
+        <section class="container">
+            <section class="infoPerso">
+                <fieldset>
+                    <legend>Informations personnelles</legend>
+                    <label for="prenom">Prénom</label>
+                    <br />
+                    <input type="text" id="prenom" class="inputText">
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+                    <label for="nom">Nom</label>
+                    <br />
+                    <input type="text" id="nom" class="inputText">
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+                    <label for="genre">Genre</label>
+                    <br />
+                    <input type="radio" id="genreM" name="genre">
+                    <label for="genreM">M</label>
+                    <input type="radio" id="genreF" name="genre">
+                    <label for="genreF">F</label>
+                    <input type="radio" id="genreN" name="genre">
+                    <label for="genreN">N</label>
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+                    <label for="pays">Pays</label>
+                    <br />
+                    <select name="pays" id="pays" class="inputText">
+                        <option value="belgique">Belgique</option>
+                        <option value="france">France</option>
+                        <option value="suisse">Suisse</option>
+                    </select>
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+                    <label for="date">Date de naissance</label>
+                    <br />
+                    <input type="date" id="date" class="inputText">
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+                    <label for="parrain">Parrain</label>
+                    <br />
+                    <input type="text" id="parrain" class="inputText">
+                    <input type="submit" value="Valider" class="submitImportant">
+                    <br />
+                </fieldset>
+            </section>
+
+            <section class="historiques">
+                <fieldset>
+                    <legend>Historiques</legend>
+                    <a routerLink="/historique_pseudo" class="submitImportant"
+                        title="Historique pseudo">Historique pseudo</a>
+                    <br />
+                    <a routerLink="/historique_dracor" class="submitImportant"
+                        title="Historique DracOr">Historique DracOr</a>
+                    <br />
+                    <a routerLink="/historique_ec" class="submitImportant"
+                        title="Historique Ecaille de Coeur">Historique Ecaille de
+                        Coeur</a>
+                    <br />
+                    <a routerLink="/historique_ea" class="submitImportant"
+                        title="Historique Ecaille d'Âme">Historique Ecaille
+                        d'Ame</a>
+                    <br />
+                    <a routerLink="/historique_pouvoirs" class="submitImportant"
+                        title="Historique des Pouvoirs">Historique des Pouvoirs</a>
+                    <br />
+                </fieldset>
+            </section>
+        </section>
+    </section>
+
+    <section class="etatCompte">
+        <section class="container">
+            <fieldset>
+                <legend>Etat du compte</legend>
+                <div class="reinitialiserCompte">
+                    <input type="submit" value="Réinisialiser la partie" class="submitImportant">
+                    <p>En réinisitalisant votre compte, toutes vos données seront remises à zéro.</p>
+                </div>
+                <div class="supprimerCompte">
+                    <input type="submit" value="Supprimer le compte" class="btnImportant">
+                    <p>Si vous supprimez votre compte, vos données seront définitivements perdues et vous ne
+                        pourrez plus vous connecter.</p>
+                </div>
+            </fieldset>
+        </section>
+    </section>

@@ -1,0 +1,26 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: $couleurTextePrincipale;
+}
+
+p{
+    margin:0;
+}
+
+h1{
+    color:$couleurTexteHeaderFooter;
+    margin:0;
+}
+
+h2{
+    margin:0;
+}
+
+h3
+{
+    color: white;
+    border-radius: $borderRadius;
+    padding:5px;
+    text-align: center;
+    background-color: $couleurSecondaireSite;
+}

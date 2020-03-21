@@ -1,0 +1,163 @@
+a{
+    text-decoration: none;
+    color:$couleurTextePrincipale;
+}
+
+header{
+    ul>li:last-child a{
+        margin: 1rem 0 1rem 1rem;
+    }
+    // ul a{
+    //     display:flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     margin:1rem;
+    //     background-color: darken($couleurSecondaireSite, 10%);
+    //     width:50px;
+    //     height: 50px;
+    //     border-radius: 50%;
+    //     transition: 0.05s;
+    //     &:hover{
+    //         background-color: darken($couleurSecondaireSite, 15%);
+    //         border: 2px solid white;
+    //     }
+    // }
+
+
+    ul a {
+        display: flex;
+        justify-content: center;
+        // padding: 0.8rem;
+        width: 50px;
+        height: 50px;
+        margin: 1rem;
+        border: 2px solid white;
+        border-radius: 50%;
+        color: $couleurTextePrincipale;
+        transition: all .2s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $couleurSecondaireSite;
+            border-radius: 50%;
+            z-index: -2;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background-color: darken($couleurSecondaireSite, 20%);
+            transition: all .2s;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        &:hover {
+            color: $couleurTexteBouton;
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
+    a{
+        color: $couleurTexteHeaderFooter;
+    }
+}
+
+.menuCommunautaire{
+    nav{
+        display:flex;
+        justify-content: flex-end;
+        // a{
+        //     display: inline-block;
+        //     margin: 1.2rem 0 1.2rem 0.2rem;
+        //     padding: 0.8rem;
+        //     border-radius: 0.3rem;
+        //     font-weight: 700;
+        //     color: $couleurTextePrincipale;
+        //     &:hover{
+        //         background-color: $couleurSecondaireSite;
+        //         color:$couleurTexteBouton;
+        //     }
+
+
+        // }
+        // .logOut{
+        //     @extend a;
+        //     color: $couleurTexteBtnImportant;
+                
+        //     background-color: $couleurBtnImportant;
+        //     &:hover{
+        //         background-color:lighten($couleurBtnImportant, 10%);
+        //         color:darken($couleurBtnImportant, 20%)
+        //     }
+        // }
+
+
+
+        a {
+            display: inline-block;
+            padding: 0.8rem;
+            margin: 1.2rem 0 1.2rem 0.2rem;
+            border-radius: 0.3rem;
+            color: $couleurTextePrincipale;
+            font-weight: 700;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $couleurPrincipaleSite;
+                border-radius: 0.3rem;
+                z-index: -2;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0%;
+                height: 100%;
+                background-color: $couleurSecondaireSite;
+                transition: all .3s;
+                border-radius: 0.3rem;
+                z-index: -1;
+            }
+            &:hover {
+                color: $couleurTexteBouton;
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+footer{
+    p{
+        font-size: 0.8rem;
+    }
+    a{
+        font-size: 1.4rem;
+        padding-left: 1.3rem;
+        color:$couleurTexteHeaderFooter;
+    }
+    
+}

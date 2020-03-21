@@ -1,0 +1,39 @@
+.inputText{
+    border-radius: 0.3rem;
+    border: none;
+    border: 2px solid $couleurTextePrincipale;
+    height: 2rem;
+    width: 150px;
+    color: $couleurTextePrincipale;
+    &:focus{
+        background-color: lighten($couleurPrincipaleSite, 30%);
+    }
+}
+
+label{
+    font-weight: 700;
+}
+
+fieldset{
+    border: 0px solid $couleurTextePrincipale;
+    border-radius: $borderRadius;
+    margin: 10px 0 10px 0;
+    background-color: lighten($couleurPrincipaleSite, 10%);
+}
+
+legend{
+    background-color: lighten($couleurPrincipaleSite, 20%);
+    padding: 10px;
+    border-radius: $borderRadius;
+    border: 0px solid $couleurTextePrincipale;
+    text-transform: uppercase;
+}
+
+.submitImportant{
+    @include submit();
+}
+
+.btnImportant{
+    @include bouton($couleurBtnImportant, $couleurTexteBtnImportant);
+}
+

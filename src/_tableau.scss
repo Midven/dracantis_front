@@ -1,0 +1,19 @@
+table{
+    margin:auto;
+}
+
+td{
+    padding:5px;
+}
+
+thead tr{
+    font-weight: bolder;
+}
+
+tr:nth-child(odd){
+    background-color: lighten($couleurPrincipaleSite, 15%);
+}
+
+tr:nth-child(even){
+    background-color: lighten($couleurPrincipaleSite, 10%);
+}
